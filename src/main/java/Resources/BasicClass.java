@@ -11,13 +11,19 @@ import org.testng.annotations.BeforeMethod;
 public class BasicClass {
 
 	public WebDriver driver; // to resolve driver error
+	       //we declare it globally (on the top) for the access in different packages
 
 	public void browserLaunch() throws IOException {
 
-		// to read the file
+		// to read the file 
 		FileInputStream file = new FileInputStream(
 				"C:\\Users\\Admin\\eclipse-workspace\\SalesForceProject\\src\\main\\java\\Resources\\data.properties");
 
+		
+		//if we want to access the property file
+		//=> we need to create object of that file
+		
+		 
 		// to get access of the file
 		Properties prop = new Properties(); // make a object of method
 
